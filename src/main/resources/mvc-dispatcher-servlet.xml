@@ -48,13 +48,6 @@
         </property>
     </bean>
 
-    <bean id="productDAO" class="ua.seriogatatarinov.orderfood.repository.impl.MySQLProductDAO">
-        <property name="sessionFactory" ref="hibernate5AnnotatedSessionFactory"/>
-    </bean>
-    <bean id="productService" class="ua.seriogatatarinov.orderfood.service.impl.ProductServiceImpl">
-        <property name="productDAO" ref="productDAO"/>
-    </bean>
-
     <context:component-scan base-package="ua.seriogatatarinov.orderfood"/>
 
     <tx:annotation-driven transaction-manager="transactionManager"/>

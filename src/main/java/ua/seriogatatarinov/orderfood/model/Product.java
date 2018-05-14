@@ -2,17 +2,20 @@ package ua.seriogatatarinov.orderfood.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Generated;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Type;
+import ua.seriogatatarinov.orderfood.util.BaseEntity;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Product {
+public class Product extends BaseEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,17 +30,17 @@ public class Product {
 	@Column(name = "description", length = 50, nullable = true)
 	private String description;
 
-	@Basic
-	@Column(name = "weight", precision = 0, nullable = true)
-	private int weight;
-
 	@NotNull
 	@ManyToOne
 	@JoinColumn(name = "id_category", referencedColumnName = "id_category")
 	private Category category;
 
 	@Basic
-	@Column(name = "price", precision = 0)
-	private int price;
+	@Column(name = "image_binary", nullable = false)
+	private String imageBinaryString;
+
+	@Type(type = "jsonb")
+	@Column(columnDefinition = "jsonb")
+	private List<Portion> portions = new ArrayList<>();
 
 }

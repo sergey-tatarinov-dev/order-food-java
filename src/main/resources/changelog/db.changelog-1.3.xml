@@ -2,14 +2,20 @@
 
 <databaseChangeLog
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
         xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
-        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd
-        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
-    <changeSet id="3" author="seriogatatarinov">
-       <insert tableName="category">
-           <column name="title" value="PIZZA"/>
-           <column name="title" value="SUSHI"/>
-       </insert>
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+    <changeSet id="4" author="seriogatatarinov">
+        <insert tableName="category">
+            <column name="title" value="PIZZA"/>
+        </insert>
+        <insert tableName="category">
+            <column name="title" value="ROLLS"/>
+        </insert>
+        <insert tableName="category">
+            <column name="title" value="SALADS"/>
+        </insert>
+        <insert tableName="category">
+            <column name="title" value="BEVERAGES"/>
+        </insert>
     </changeSet>
 </databaseChangeLog>
