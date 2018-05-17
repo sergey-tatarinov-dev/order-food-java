@@ -9,13 +9,13 @@
             <column name="title" value="PIZZA"/>
         </insert>
         <insert tableName="category">
-            <column name="title" value="ROLLS"/>
+            <column name="title" value="SUSHI"/>
         </insert>
         <insert tableName="category">
             <column name="title" value="SALADS"/>
         </insert>
         <insert tableName="category">
-            <column name="title" value="BEVERAGES"/>
+            <column name="title" value="DRINKS"/>
         </insert>
     </changeSet>
 </databaseChangeLog>

@@ -10,6 +10,6 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Portion implements Serializable {
-	private int size;
+	private String size;
 	private int price;
 }

@@ -15,6 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(name = "Product")
 public class Product extends BaseEntity {
 
 	@Id
@@ -31,7 +32,7 @@ public class Product extends BaseEntity {
 	private String description;
 
 	@NotNull
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "id_category", referencedColumnName = "id_category")
 	private Category category;
 
